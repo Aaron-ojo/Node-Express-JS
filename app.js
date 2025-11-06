@@ -1,4 +1,12 @@
-const _ = require("lodash");
-const items = [1, [2, [3, [4]]]];
-const newItems = _.flattenDeep(items);
-console.log(newItems);
+const http = require("http");
+
+// const server = http.createServer((req, res) => {
+//     res.end("welcome")
+// })
+
+const server = http.createServer();
+server.on("request", (req, res) => {
+  res.end("welcome");
+});
+
+server.listen(5000);
